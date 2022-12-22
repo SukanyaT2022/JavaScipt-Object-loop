@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="Book Name">Book Name <input type="text" placeholder="Enter your book name"
+                id="bookName"></label><br>
+        <label for="Author">Author <input type="text" placeholder="Enter author name" id="authorName"></label><br>
+        <label for="subject">Subject <input type="text" placeholder="Enter subject" id="subject"></label><br>
+        <input type="button" value="Submit" onclick="insertBook">
+
+    </form>
+
+
+
+    <script>
+        //create construtor fuction for book 
+
+        function book() {
+            this.author = " "
+            this.bookName = " "
+            this.subject = " "
+        }
+
+
+        var objArray = new Array()
+
+        function insertBook() {
+            var bookN = document.getElementById("bookName").value;
+            var Aut = document.getElementById("authorName").value;
+            var Subj = document.getElementById("subject").value;
+
+
+            var obj = new book()//crate blank object
+            //create property
+            obj.bookName = bookN
+            obj.author = Aut
+            obj.subject = Subj
+
+        }
+//continue here for next time
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+//create construtor fuction for book 
+
+function book(){
+this.author = " "
+this.bookName = " "
+this.subject = " "
+}
+
+//create new book object
+//position 0
+var obj = new book()
+obj.author = "JK"
+obj.bookName = "Harry Potter"
+obj.subject = "non fiction"
+//position 1
+var objTwo = new book()
+objTwo.author = "Sp"
+objTwo.bookName = "Spiderman"
+objTwo.subject = "non fiction"
+
+//document.write(obj.author + "<br> " + obj.bookName)
+//call object.property name
+
+//if we can to call all of object at the same time --one name represent all we use array
+
+var objArray = new Array()
+objArray.push(obj)
+objArray.push(objTwo)
+/* show all value on all object
+for (i=0; i<objArray.length; i++){
+    document.write(objArray[i].author + "<br> " + objArray[i].bookName + "<br>")
+
+}
+*/
+
+// use array to call it--we call only group jk--show only one value
+document.write(objArray[0].author + "<br> " + objArray[0].bookName)
+
+
+
+
+    </script>
+</body>
+</html>
