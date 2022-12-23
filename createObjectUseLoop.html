@@ -14,11 +14,12 @@
                 id="bookName"></label><br>
         <label for="Author">Author <input type="text" placeholder="Enter author name" id="authorName"></label><br>
         <label for="subject">Subject <input type="text" placeholder="Enter subject" id="subject"></label><br>
-        <input type="button" value="Submit" onclick="insertBook">
+        <input type="button" value="Submit" onclick="insertBook()">
+        <input type="button" value="Display Book" onclick="dispayB()">
 
     </form>
 
-
+<p id="bookDetail"></p>
 
     <script>
         //create construtor fuction for book 
@@ -30,7 +31,7 @@
         }
 
 
-        var objArray = new Array()
+        var objArray = new Array()// we create array
 
         function insertBook() {
             var bookN = document.getElementById("bookName").value;
@@ -44,9 +45,23 @@
             obj.author = Aut
             obj.subject = Subj
 
-        }
-//continue here for next time
 
+            //we push object above to array
+            objArray.push(obj)
+
+
+
+        }
+// we create the fuction will display all detail insted of put document.write many time
+function dispayB(){
+    var str = ""
+    for (i=0; i<objArray.length; i++){ // this loop check all the book object
+    str += (objArray[i].author + "  " + objArray[i].bookName + " " + objArray[i].subject + "<br>")
+//objArray[i] represent each object in the array at position i--each value inside array
+}
+document.getElementById("bookDetail").innerHTML = str
+
+}
 
 
 

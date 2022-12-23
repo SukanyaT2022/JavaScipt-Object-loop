@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+<h2>Kid shop</h2>
+
+<label for="">Product Type</label> <input type="text" id="productType">
+<label for="">Product Price</label> <input type="text" id="productPrice">
+<label for="">Product Name</label> <input type="text" id="productName">
+<input type="button" value="submit" onclick="check()">
+<input type="button" value="Display Detail" onclick="display()">
+
+    </form>
+    <p id="paragraphString"> </p>
+
+
+
+
+
+<script>
+
+function products(){
+this.productType = "";
+this.productPrice = "";
+this.productName = "";
+
+}
+//next we make array
+
+var obj = new Array()
+
+//create another product and add to array
+function check(){
+
+
+
+var kitchen = new products()
+kitchen.productType = document.getElementById("productType").value;
+kitchen.productPrice =  document.getElementById("productPrice").value;
+kitchen.productName =  document.getElementById("productName").value;
+
+//the add object(product just add ex kitchen to array) to array
+
+obj.push(kitchen)
+
+}
+
+
+
+function display(){
+
+
+//nextwe make loop
+
+var str = ""// we install product in the string--kitchen section
+//now we make for loop
+for (i=0; i<obj.length; i++){
+
+str += obj[i].productType + " " + obj[i].productPrice + " " + obj[i].productName
+
+}
+
+document.getElementById("paragraphString").innerHTML = str //we want to show the whole detail of str
+
+}
+
+</script>
+
+    
+</body>
+</html>
